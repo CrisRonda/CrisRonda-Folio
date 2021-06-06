@@ -1,15 +1,18 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { HomeProps } from "interfaces/Pages";
+import { GetServerSideProps } from "next";
+import { FC } from "react";
+import Home from "src/Pages/Home";
+import { getURLStreaming } from "src/services/audio";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+const Index: FC<HomeProps> = (props) => <Home {...props} />;
 
-export default IndexPage
+export const getServerSideProps: GetServerSideProps = async () => {
+  const data = await getURLStreaming();
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+export default Index;

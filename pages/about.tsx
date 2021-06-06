@@ -1,8 +1,9 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { GetServerSideProps } from "next";
+import Link from "next/link";
+import { getURLStreaming } from "src/services/audio";
 
 const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
+  <>
     <h1>About</h1>
     <p>This is the about page</p>
     <p>
@@ -10,7 +11,14 @@ const AboutPage = () => (
         <a>Go home</a>
       </Link>
     </p>
-  </Layout>
-)
-
-export default AboutPage
+  </>
+);
+export const getServerSideProps: GetServerSideProps = async () => {
+  const data = await getURLStreaming();
+  return {
+    props: {
+      data,
+    },
+  };
+};
+export default AboutPage;
