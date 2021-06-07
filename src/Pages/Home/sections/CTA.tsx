@@ -10,11 +10,14 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 const Programmer = dynamic(() => import("src/components/Programmer"), {
   ssr: false,
 });
 
 export default function CallToActionWithAnnotation() {
+  const t = useTranslations("Home");
+
   return (
     <Container
       height="calc(100vh - 64px)"
@@ -47,7 +50,8 @@ export default function CallToActionWithAnnotation() {
                 Ronda
               </Text>
             </Heading>
-            <Text color={"gray.500"}>Frontend developer</Text>
+
+            <Text color={"gray.500"}>{t("title")}</Text>
           </Flex>
         </GridItem>
         <GridItem colSpan={{ base: 2, lg: 1 }}>

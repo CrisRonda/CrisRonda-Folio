@@ -19,6 +19,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import TooggleLang from "src/components/TooggleLang";
 import NAV_ITEMS, { NavItem } from "./menu";
 import NextLink from "src/components/NextLink";
 
@@ -34,6 +35,7 @@ export default function CustomNav() {
       zIndex="popover"
     >
       <DarkModeSwitch />
+      <TooggleLang />
 
       <Flex flex={1} direction="column" justifyContent="space-around">
         <DesktopNav />

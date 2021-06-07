@@ -22,7 +22,7 @@ import {
   AiFillWarning,
 } from "react-icons/ai";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
 const ImageMotion = motion(Image);
 const ICON_SIZE = 18;
@@ -172,4 +172,4 @@ const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
   );
 };
 
-export default AudioPlayer;
+export default memo(AudioPlayer);

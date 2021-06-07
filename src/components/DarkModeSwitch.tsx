@@ -1,5 +1,5 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { useColorMode, Switch, IconButton } from "@chakra-ui/react";
+import { useColorMode, IconButton } from "@chakra-ui/react";
 
 export const DarkModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -11,6 +11,7 @@ export const DarkModeSwitch = () => {
       variant={"ghost"}
       aria-label={"Toggle Navigation"}
       onClick={toggleColorMode}
+      my="4"
     />
   );
 };
