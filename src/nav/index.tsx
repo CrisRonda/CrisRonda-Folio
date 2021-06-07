@@ -37,7 +37,12 @@ export default function CustomNav() {
       <DarkModeSwitch />
       <TooggleLang />
 
-      <Flex flex={1} direction="column" justifyContent="space-around">
+      <Flex
+        flex={1}
+        direction="column"
+        justifyContent="space-around"
+        overflow="scroll"
+      >
         <DesktopNav />
       </Flex>
     </Flex>

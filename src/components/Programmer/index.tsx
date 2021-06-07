@@ -3,15 +3,11 @@ import { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls } from "drei";
 import { Euler, Vector3, MathUtils } from "three";
+import { Flex } from "@chakra-ui/react";
 
 const Programmer = () => {
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-      }}
-    >
+    <Flex flex={1} position="absolute" width="100%" height="100%">
       <Canvas
         camera={{
           position: [0, 1, 12],
@@ -19,7 +15,7 @@ const Programmer = () => {
       >
         <ambientLight intensity={1.1} />
         <pointLight position={[40, 40, 20]} />
-        <OrbitControls />
+        <OrbitControls enablePan={false} enableZoom={false} />
         <Suspense fallback={<>Cargando...</>}>
           <Model slice={18} position={new Vector3(0, 15, 0)} />
           <Model
@@ -29,7 +25,7 @@ const Programmer = () => {
           />
         </Suspense>
       </Canvas>
-    </div>
+    </Flex>
   );
 };
 export default Programmer;

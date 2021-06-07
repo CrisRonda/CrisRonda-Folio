@@ -23,10 +23,12 @@ import {
 } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { memo, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const ImageMotion = motion(Image);
 const ICON_SIZE = 18;
 const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
+  const t = useTranslations("Home");
   const { now_playing, station } = data;
   const audioRef = useRef<HTMLAudioElement>();
   const { isOpen, onToggle } = useDisclosure();
@@ -115,7 +117,7 @@ const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
         <Flex flex={1} />
         <Box>
           <Text fontSize="xx-small" mb={0} lineHeight="none">
-            Gracias
+            {t("thanks")}
           </Text>
           <Link href="https://coderadio.freecodecamp.org/" isExternal>
             <Image

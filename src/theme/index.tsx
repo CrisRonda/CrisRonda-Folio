@@ -69,6 +69,9 @@ const theme = extendTheme({
       "::-webkit-scrollbar": {
         display: "none",
       },
+      "::-webkit-scrollbar-track-piece": {
+        display: "none",
+      },
     }),
   },
 });

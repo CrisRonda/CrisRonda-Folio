@@ -1,6 +1,8 @@
 {
   "Home": {
     "name": "Cristian Ronda",
-    "title": "Frontend developer"
+    "title": "Frontend developer",
+    "downloadResume": "Download resumen",
+    "thanks": "Thanks to"
   }
 }
