@@ -11,10 +11,10 @@ export const colors = {
   warning: "#ffcc00",
   js_primary: "rgb(240, 219, 79)",
   js_secondary: "rgb(50, 51, 48)",
-  l_text: "rgba(46, 49, 49, 1)",
+  l_text: "rgba(255,255,255, 1)",
   l_button_text: "#fff",
-  l_bg: "#fff",
+  l_bg: "rgba(55,55,55)",
   d_text: "rgba(255,255,255, .7)",
   d_button_text: "#000",
-  d_bg: "rgba(55,55,55)",
+  d_bg: "black",
 };

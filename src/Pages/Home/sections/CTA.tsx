@@ -9,10 +9,18 @@ import {
   GridItem,
   Flex,
 } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+const Programmer = dynamic(() => import("src/components/Programmer"), {
+  ssr: false,
+});
 
 export default function CallToActionWithAnnotation() {
   return (
-    <Container height="calc(100vh - 64px)" maxW="7xl">
+    <Container
+      height="calc(100vh - 64px)"
+      maxW="1440px"
+      px={{ base: 4, lg: 8 }}
+    >
       <Grid
         templateRows={{
           base: "1fr 1fr",
@@ -42,7 +50,9 @@ export default function CallToActionWithAnnotation() {
             <Text color={"gray.500"}>Frontend developer</Text>
           </Flex>
         </GridItem>
-        <GridItem colSpan={{ base: 2, lg: 1 }}></GridItem>
+        <GridItem colSpan={{ base: 2, lg: 1 }}>
+          <Programmer />
+        </GridItem>
       </Grid>
     </Container>
   );

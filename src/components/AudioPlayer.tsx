@@ -26,7 +26,7 @@ import { useEffect, useRef, useState } from "react";
 
 const ImageMotion = motion(Image);
 const ICON_SIZE = 18;
-const AudioPlayer = ({ data }: { data: Partial<CodeRadioDataType> }) => {
+const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
   const { now_playing, station } = data;
   const audioRef = useRef<HTMLAudioElement>();
   const { isOpen, onToggle } = useDisclosure();
@@ -66,6 +66,7 @@ const AudioPlayer = ({ data }: { data: Partial<CodeRadioDataType> }) => {
   }
   return (
     <Flex
+      zIndex="banner"
       position="sticky"
       direction="row"
       top={0}
@@ -92,7 +93,7 @@ const AudioPlayer = ({ data }: { data: Partial<CodeRadioDataType> }) => {
         />
         <ImageMotion
           loading="lazy"
-          src={now_playing.song.art}
+          src={now_playing?.song?.art}
           width={6}
           height={6}
           whileHover={{ scale: 2.2 }}
@@ -105,10 +106,10 @@ const AudioPlayer = ({ data }: { data: Partial<CodeRadioDataType> }) => {
             lineHeight="none"
             textTransform="capitalize"
           >
-            {now_playing.song.title}
+            {now_playing?.song?.title}
           </Text>
           <Text fontSize="xx-small" textTransform="capitalize">
-            {now_playing.song.album} || {now_playing.song.artist}
+            {now_playing?.song?.album} || {now_playing?.song?.artist}
           </Text>
         </Box>
         <Flex flex={1} />
@@ -164,7 +165,7 @@ const AudioPlayer = ({ data }: { data: Partial<CodeRadioDataType> }) => {
         style={{ display: "none" }}
         controls
         id="audio"
-        src={station.listen_url}
+        src={station?.listen_url}
         autoPlay
       />
     </Flex>

@@ -31,6 +31,7 @@ export default function CustomNav() {
       right={0}
       height="100vh"
       direction="column"
+      zIndex="popover"
     >
       <DarkModeSwitch />
 
@@ -52,9 +53,9 @@ const DesktopNav = () => (
               as={Flex}
               justifyContent="center"
               alignItems="center"
-              fontSize={"small"}
+              fontSize={"lg"}
               fontWeight={500}
-              color="white"
+              color="js_primary"
               _hover={{
                 textDecoration: "none",
                 transform:
