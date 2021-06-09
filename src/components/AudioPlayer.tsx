@@ -24,16 +24,19 @@ import {
 import { motion } from "framer-motion";
 import { memo, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { detectMobileDevice } from "src/lib";
 
 const ImageMotion = motion(Image);
 const ICON_SIZE = 18;
+const isMobile = detectMobileDevice();
+
 const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
   const t = useTranslations("Home");
   const { now_playing, station } = data;
   const audioRef = useRef<HTMLAudioElement>();
   const { isOpen, onToggle } = useDisclosure();
   const [volumen, setVolumen] = useState(0.2);
-  const [pause, setPause] = useState(false);
+  const [pause, setPause] = useState(isMobile);
   const [showPlayer, setShowPlayer] = useState(true);
 
   useEffect(() => {
@@ -48,6 +51,7 @@ const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
         try {
           await audioRef.current.play();
         } catch (error) {
+          console.log(error);
           setShowPlayer(false);
           setPause(true);
           <Alert status="error">

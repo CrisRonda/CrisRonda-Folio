@@ -29,7 +29,7 @@ const Section = ({
       id={id}
       maxW={CONTAINER_WIDTH}
       as={Grid}
-      py={12}
+      py={8}
       gridTemplateRows="1fr"
       gridTemplateColumns={{
         base: "1fr",
@@ -60,6 +60,8 @@ const Section = ({
           fontSize="1xl"
           as="div"
           dangerouslySetInnerHTML={{ __html: content }}
+          pl={{ base: 2, lg: 4 }}
+          pr={{ base: 6 }}
           transition="all .3s ease"
           _hover={{
             color: "white",

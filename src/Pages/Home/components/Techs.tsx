@@ -36,7 +36,7 @@ const Techs = ({ values, example }: ValuesProps) => (
     {example && (
       <Button
         size="sm"
-        mt="8"
+        my="8"
         onClick={() => window.open(example.url, "_blank")}
       >
         {example.label}

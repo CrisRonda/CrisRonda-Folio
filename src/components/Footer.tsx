@@ -1,11 +1,10 @@
 import {
   Box,
-  chakra,
   Container,
   Stack,
   Text,
   useColorModeValue,
-  VisuallyHidden,
+  Link,
   Image,
 } from "@chakra-ui/react";
 
@@ -48,7 +47,20 @@ export default function SmallCentered() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2020 Cristian Ronda. All rights reserved</Text>
+          <Text>
+            © {new Date().getFullYear()} Cristian Ronda. All rights reserved
+          </Text>
+          <Text>
+            Powered by{" "}
+            <Link
+              color="blue.400"
+              fontWeight="bold"
+              href="https://nextjs.org/"
+              target="_blank"
+            >
+              Next JS and Vercel
+            </Link>
+          </Text>
         </Container>
       </Box>
     </Box>
