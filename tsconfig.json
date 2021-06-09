@@ -19,7 +19,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/Programmer/Model.tsx"
+    "src/components/Programmer/Model.tsx",
+    "analytics/index.js"
   ],
   "exclude": ["node_modules"]
 }
