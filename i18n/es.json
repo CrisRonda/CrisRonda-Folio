@@ -1,8 +1,37 @@
 {
   "Home": {
     "name": "Cristian Ronda",
-    "title": "Desarrollador frontend",
-    "downloadResume": "Descargar CVV",
-    "thanks": "Gracias a"
+    "title": "Bienvenido a mi web!<br/><br/>Soy ingeniero en Redes de Información, desarrollador, amante a la comida y 100% Ecuatoriano 🇪🇨.<br/>Descarga mi curriculum o si estas de paso revisa que tecnologías domino, si quieres contratarme ¡contactame!<br/><br/>Y no olvides disfrutar la música 👨‍🚀. ¡Gracias por tu visita!",
+    "downloadResume": "Ver mi CVV",
+    "thanks": "Música Gracias a",
+    "tech1": {
+      "title": "Desarrollo móvil",
+      "subtitle": "iOS y Android",
+      "description": "Tengo amplia experiencia creando soluciones en plataformas móviles con funcionalidades como: Push notifications, Mapas, diseño responsive y animaciones.<br/>¡Animate a utilizar mi aplicación de prueba!",
+      "buttonText": "Descargar app de prueba"
+    },
+    "tech2": {
+      "title": "Desarrollo Frontend",
+      "subtitle": "Web apps y Progressive Web Apps",
+      "buttonText": "Visitar la web Ecommerce",
+      "description": "Experto en la creación de productos web con React, he trabajado en importantes proyectos que demandan un diseño actual y responsivo. Las funcionalidades que interesantes que he realizado, son: animaciones 3D, SASS, creación de PWAs y el manejo de mapas con Google Maps API.<br/>¿Quieres ver mi demo de ecommerce? Adelante, ¡Solo dale click!"
+    },
+    "tech3": {
+      "title": "Desarrollo Backend",
+      "subtitle": "Node JS, REST, GraphQL, MongoDB y Firebase",
+      "description": "Tengo experiencia en la creación de proyectos que requieran de un API Rest o con GrapQL con una base NO-SQL como Mongo. Además, tengo dominio de Firebase tanto en su configuraciôn, bases de datos, analítica, FCM, entre otros.<br/>¿Sabías que me encanta Dragon Ball Z? Si, me encanta tanto que le hice una API. ¿Te animas a probarla? ",
+      "buttonText": "Probar DBZ API"
+    },
+    "contact": {
+      "title": "Contactáctame a través de mis redes",
+      "subtitle": "Llámame o escribeme",
+      "call": "Teléfono"
+    }
+  },
+  "Navigation": {
+    "changeLang": "Change to EN",
+    "home": "Inicio",
+    "tech": "Tecnologías",
+    "contact": "Contacto"
   }
 }

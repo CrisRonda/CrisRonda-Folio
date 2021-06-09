@@ -15,6 +15,7 @@ const components: Partial<ThemeComponents> = {
   Text: {
     baseStyle: ({ colorMode }) => ({
       color: isDark(colorMode),
+      lineHeight: "1.7rem",
     }),
   },
   Code: {

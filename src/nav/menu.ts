@@ -4,39 +4,27 @@ export interface NavItem {
   children?: Array<NavItem>;
   href?: string;
   isNextLink?: boolean;
+  shallow?: boolean;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Home",
+    label: "home",
     href: "/#",
     isNextLink: true,
+    shallow: true,
   },
   {
-    label: "Portfolio",
-    href: "#",
-  },
-  {
-    label: "About me",
-    href: "/about",
+    label: "tech",
+    href: "/#tecnologias",
     isNextLink: true,
-    children: [
-      {
-        label: "History",
-        subLabel: "About me since I born",
-        href: "#",
-      },
-      {
-        label: "Carrer",
-        subLabel: "Data in my develop",
-        href: "#",
-      },
-    ],
+    shallow: true,
   },
   {
-    label: "Contact",
-    href: "/#contact",
+    label: "contact",
+    href: "/#contacto",
     isNextLink: true,
+    shallow: true,
   },
 ];
 export default NAV_ITEMS;

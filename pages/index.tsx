@@ -3,7 +3,6 @@ import { GetServerSideProps } from "next";
 import { FC } from "react";
 import Home from "src/Pages/Home";
 import { getURLStreaming } from "src/services/audio";
-import { getMessagesByLocale } from "i18n";
 
 const Index: FC<HomeProps> = (props) => <Home {...props} />;
 

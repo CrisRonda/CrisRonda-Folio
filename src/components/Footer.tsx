@@ -2,48 +2,14 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   Stack,
   Text,
   useColorModeValue,
   VisuallyHidden,
   Image,
 } from "@chakra-ui/react";
-import { ReactNode } from "react";
 
 const LOGO = process.env.NEXT_PUBLIC_LOGO_DARK;
-
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode;
-  label: string;
-  href: string;
-}) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  );
-};
 
 export default function SmallCentered() {
   return (
@@ -66,12 +32,6 @@ export default function SmallCentered() {
           objectFit="cover"
           width="156px"
         />
-        <Stack direction={"row"} spacing={6}>
-          <Link href={"#"}>Home</Link>
-          <Link href={"#"}>About</Link>
-          <Link href={"#"}>Blog</Link>
-          <Link href={"#"}>Contact</Link>
-        </Stack>
       </Container>
 
       <Box

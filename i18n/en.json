@@ -1,8 +1,37 @@
 {
   "Home": {
     "name": "Cristian Ronda",
-    "title": "Frontend developer",
-    "downloadResume": "Download resumen",
-    "thanks": "Thanks to"
+    "title": "Welcome to my website!<br/><br/>I am an Information Network engineer, developer, food lover and 100% Ecuadorian 🇪🇨. <br/> Download my resume or if you are passing check what technologies I master, If you want to hire me, contact me!<br/><br/>And enjoy music 👨‍🚀. Thanks for your visit!",
+    "downloadResume": "See my resumen",
+    "thanks": "Music Thanks to",
+    "tech1": {
+      "title": "Mobile Development",
+      "subtitle": "iOS & Android",
+      "description": "I have extensive experience creating solutions on mobile platforms with functionalities such as: push notifications, maps, responsive design and animations. <br/> Go ahead and use my test app!",
+      "buttonText": "Download my trial app"
+    },
+    "tech2": {
+      "title": "Frontend Development",
+      "subtitle": "Web apps & Progressive Web Apps",
+      "buttonText": "Visit the Ecommerce website",
+      "description": "An expert in creating web products with React, I have worked on important projects that require a current and responsive design. The interesting features I have made are: 3D animations, SASS, PWA creation and maps with the Google Maps API. <br/> Do you want to see my e-commerce demo? Just click on it!"
+    },
+    "tech3": {
+      "title": "Backend Development",
+      "subtitle": "Node JS, REST, GraphQL, MongoDB & Firebase",
+      "description": "I have experience in creating projects that require a Rest API or GrapQL with a NO-SQL base like Mongo. Also, I have domain of Firebase in its configuration, databases, analytics, FCM, etc. <br/> Did you know that I love Dragon Ball Z? Yes, I love it so much that I made it an API. Do you dare to try it?",
+      "buttonText": "Try DBZ API"
+    },
+    "contact": {
+      "title": "Contact me through my networks",
+      "subtitle": "Call me or write me",
+      "call": "Phone"
+    }
+  },
+  "Navigation": {
+    "changeLang": "Cambiar a ES",
+    "home": "Home",
+    "tech": "Tech",
+    "contact": "Contact"
   }
 }

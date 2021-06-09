@@ -70,7 +70,15 @@ export default function CallToActionWithAnnotation() {
               </GlichText>
             </Box>
 
-            <Text color={"gray.500"}>{t("title")}</Text>
+            <Text
+              my="4"
+              color={"white.600"}
+              dangerouslySetInnerHTML={{ __html: `${t("title")}` }}
+              transition="all .3s ease"
+              _hover={{
+                color: "white",
+              }}
+            ></Text>
             <Button
               my={2}
               bg="blue.500"

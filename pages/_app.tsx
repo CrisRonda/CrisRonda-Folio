@@ -4,8 +4,11 @@ import theme from "src/theme";
 import { AppProps } from "next/app";
 import AudioPlayer from "src/components/AudioPlayer";
 import NavBar from "src/nav";
+import Footer from "src/components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { statusCode } = pageProps;
+
   return (
     <NextIntlProvider
       formats={{
@@ -21,9 +24,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       timeZone="America/Guayaquil"
     >
       <ChakraProvider resetCSS theme={theme}>
-        <AudioPlayer data={pageProps.data} />
-        <NavBar />
+        {!statusCode && <AudioPlayer data={pageProps.data} />}
+        {!statusCode && <NavBar />}
         <Component {...pageProps} />
+        {!statusCode && <Footer />}
       </ChakraProvider>
     </NextIntlProvider>
   );

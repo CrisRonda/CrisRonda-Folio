@@ -107,10 +107,11 @@ const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
             mb={0}
             lineHeight="none"
             textTransform="capitalize"
+            noOfLines={1}
           >
             {now_playing?.song?.title}
           </Text>
-          <Text fontSize="xx-small" textTransform="capitalize">
+          <Text noOfLines={1} fontSize="xx-small" textTransform="capitalize">
             {now_playing?.song?.album} || {now_playing?.song?.artist}
           </Text>
         </Box>

@@ -1,17 +1,26 @@
 import { Flex, Heading } from "@chakra-ui/react";
 
-export const Hero = ({ title, colors }: { title: string; colors: string }) => (
-  <Flex
-    justifyContent="center"
-    alignItems="center"
-    bgGradient={`linear(to-l, ${colors})`}
-    bgClip="text"
-  >
-    <Heading fontSize="4vw">{title}</Heading>
-  </Flex>
-);
+export const Hero = ({
+  title,
+  colors,
+  fontSize,
+  reverse,
+}: {
+  title: string;
+  colors: string[];
+  fontSize: string;
+  reverse?: boolean;
+}) => {
+  const gradient = reverse ? colors.reverse().join(",") : colors.join(",");
+
+  return (
+    <Flex bgGradient={`linear(to-l, ${gradient})`} bgClip="text" my="4">
+      <Heading fontSize={fontSize}>{title}</Heading>
+    </Flex>
+  );
+};
 
 Hero.defaultProps = {
   title: "title here",
-  colors: "primary, secondary",
+  colors: ["primary", "js_primary"],
 };
