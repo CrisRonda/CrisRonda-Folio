@@ -28,7 +28,6 @@ import { detectMobileDevice } from "src/lib";
 
 const ImageMotion = motion(Image);
 const ICON_SIZE = 18;
-const isMobile = detectMobileDevice();
 
 const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
   const t = useTranslations("Home");
@@ -36,7 +35,7 @@ const AudioPlayer = ({ data = {} }: { data: Partial<CodeRadioDataType> }) => {
   const audioRef = useRef<HTMLAudioElement>();
   const { isOpen, onToggle } = useDisclosure();
   const [volumen, setVolumen] = useState(0.2);
-  const [pause, setPause] = useState(isMobile);
+  const [pause, setPause] = useState(true);
   const [showPlayer, setShowPlayer] = useState(true);
 
   useEffect(() => {

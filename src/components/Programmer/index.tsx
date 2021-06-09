@@ -3,7 +3,7 @@ import { memo, Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls } from "drei";
 import { Euler, Vector3, MathUtils } from "three";
-import { Flex, IconButton, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, IconButton, useDisclosure } from "@chakra-ui/react";
 import { MdTouchApp, MdStop } from "react-icons/md";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import { useRouter } from "next/router";
@@ -15,22 +15,25 @@ const Programmer = () => {
 
   return (
     <Flex flex={1} position="absolute" width="100%" height="100%">
-      <div>
+      <Box position="absolute" top={0} left={0} zIndex="modal">
         <IconButton
+          display="block"
           icon={!isOpen ? <MdTouchApp size="32px" /> : <MdStop size="32px" />}
           onClick={onToggle}
           aria-label={"Enable gestures"}
           variant="ghost"
+          my="4"
         />
         {showFullScreen && (
           <IconButton
+            display="block"
             icon={<AiOutlineFullscreen size="32px" />}
             onClick={() => push("/programador")}
             aria-label={"Enable gestures"}
             variant="ghost"
           />
         )}
-      </div>
+      </Box>
       <Canvas
         camera={{
           position: [0, 1, 12],
