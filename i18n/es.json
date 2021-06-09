@@ -33,5 +33,9 @@
     "home": "Inicio",
     "tech": "Tecnologías",
     "contact": "Contacto"
+  },
+  "SEO": {
+    "title": "Cristian Ronda | Sitio web",
+    "description": "Cristian Ronda es Ingeniero en Redes de Información y desarrollador ecuatoriano ubicado en Quito - Ecuador. Se especializar en la creación de aplicaciones web, móviles y de servidor. Así como tambien domina el servicio de Google Firebase. Visita su página esta espectacular!"
   }
 }

@@ -33,5 +33,9 @@
     "home": "Home",
     "tech": "Tech",
     "contact": "Contact"
+  },
+  "SEO": {
+    "title": "Cristian Ronda | Website",
+    "description": "Cristian Ronda is an Information Network Engineer and Ecuadorian developer located in Quito - Ecuador. He specializes in creating web, mobile and server applications. Just as he also dominates the Google Firebase service. Visit his page is spectacular!"
   }
 }
